@@ -1,0 +1,42 @@
+Your task is to take an image of a cell in a gridworld, then output a json file describing the object in the cell, using pddl, based on the pddl domain definition.
+
+There can be multiple objects in the cell, please make sure you represent them all.
+
+The location should be set with xloc and yloc, using placeholder $i and $j for the values. Please also remember to add relevant attributes such as color and shapes if applicable.
+
+Example:
+
+Input:
+
+Instruction: There are pins and balls on the table. The items can be used or new. The pins can have a circle or square shape.
+
+
+object_types: 
+{
+    "generic_objects":  ["pin"],
+    "unique_objects": ["tennisball", "basketball", "baseball"],
+    "agent": ["human"]
+}
+
+pddl_predicates: (isShape ?p - pin ?s - shape) (isNew ?i - item)
+
+
+Image: [insert image of the cell showing a new circle pin and a baseball on a white square]
+
+Output:
+
+{
+"object_name": ["pin", "baseball"]
+"object_pddl_str": "(= (yloc pin) $i) \n(= (xloc pin) $j) \n(isShape pin circle) \n(isNew pin) \n(= (yloc baseball) $i) \n(= (xloc baseball) $j)\n "
+}
+
+if currently there is no pin, then your output for object name would instead be : "object_name": ["pin1", "baseball"]
+
+if none of the objects are present (please do not count cell type, such as whitespace in this case), then output:
+{
+"object_name": []
+"object_pddl_str": ""
+}
+
+if you are classifying objects that have shapes and colors, you must include those attributes. Doors are locked by default.
+

@@ -1,0 +1,44 @@
+{
+    "198": {
+        "type": "whitespace",
+        "objects": [
+            "KoreanTruck",
+            "parkinglot"
+        ],
+        "object_pddl_str": "(= (yloc KoreanTruck) $i) \n(= (xloc KoreanTruck) $j) \n(= (yloc parkinglot) $i) \n(= (xloc parkinglot) $j)\n"
+    },
+    "254": {
+        "type": "whitespace",
+        "objects": [],
+        "object_pddl_str": ""
+    },
+    "206": {
+        "type": "whitespace",
+        "objects": [
+            "student"
+        ],
+        "object_pddl_str": "(= (yloc student) $i) \n(= (xloc student) $j)\n"
+    },
+    "0": {
+        "type": "buildings",
+        "objects": [],
+        "object_pddl_str": ""
+    },
+    "203": {
+        "type": "whitespace",
+        "objects": [
+            "LebaneseTruck",
+            "parkinglot"
+        ],
+        "object_pddl_str": "(= (yloc LebaneseTruck) $i) \n(= (xloc LebaneseTruck) $j) \n(= (yloc parkinglot) $i) \n(= (xloc parkinglot) $j)\n"
+    },
+    "175": {
+        "type": "whitespace",
+        "objects": [
+            "KoreanTruck",
+            "student",
+            "parkinglot"
+        ],
+        "object_pddl_str": "(= (yloc KoreanTruck) $i) \n(= (xloc KoreanTruck) $j) \n(= (yloc student) $i) \n(= (xloc student) $j) \n(= (yloc parkinglot) $i) \n(= (xloc parkinglot) $j)\n"
+    }
+}

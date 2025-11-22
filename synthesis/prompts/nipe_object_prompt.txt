@@ -1,0 +1,23 @@
+Your task is to output a dictionary of physical objects present in the problem. Make sure you do not include object attributes. Agent(s) should be under the agent category.
+"unique_objects" include objects that are unique and only one instance exists in the domain.
+"generic_objects" include generic objects. There are usually more than 1 of these in the domain. If the task says "there are 2 generic X", then X should be a generic object.
+
+The background cells indicate the kinds of cells in the domain and their purpose is to indicate which cell/space objects or agents can exist in the map. For example, if tables indicate barriers, then they should be inside the background_cells. They should not be part of generic_objects. If a particular object can be placed on top of a generic entity, then the generic should be a generic_object and not a background cell.
+
+NOTE: the object names should have no space in them. You may use hyphen instead.
+
+Input:
+
+Text: In this domain, you are observing a human agent trying to reach some balls and plates. There is a tennis ball, a basketball and a baseball. The plate can have shapes of circle or square. The agent can move up, down, left or right. There are white spaces and plants in the map. The grasses are marked as green. The agents and objects can only exist in whitespaces.
+
+Output:
+
+{
+    "generic_objects":  ["plate"],
+    "unique_objects":["tennisball", "basketball", "baseball"],
+    "background_cells": ["whitespace", "plants"],
+    "agent": ["human"]
+}
+
+Input:
+

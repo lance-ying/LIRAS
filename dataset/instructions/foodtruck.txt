@@ -1,0 +1,9 @@
+You are watching an agent going to get food from a foodtruck. There are two parking lots and three possible food trucks: KoreanTruck, LebaneseTruck, MexicanTruck. Foodtrucks can only park at parking lots.
+
+The grid is 5 by 15. The agent is marked as a circle, the three trucks are marked by letters (K, KoreanTruck; L, LebaneseTruck; M, MexicanTruck), parking spaces are marked as P, and buildings are marked by black squares. The agent can only walk on the white squres.
+
+The agent can only perform these four actions: left, right, up, and down. Their goal is to go to one of the foodtrucks for lunch (be adjacent to the foodtruck).
+
+The agent cannot see and does not know what’s behind the building, and they can only see objects in their line of sight. There are only two parking spaces so at least one foodtruck is missing at any single day.
+
+Your task is to infer the agent's preference of the three foodtrucks.

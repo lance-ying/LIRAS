@@ -1,0 +1,37 @@
+{
+    "grid_size": [
+        5,
+        15
+    ],
+    "observability": "partial",
+    "belief_config": {
+        "belief_object": "foodtruck",
+        "belief_container": "parkinglot",
+        "barrier": "buildings",
+        "agent": "student"
+    },
+    "goals": [
+        [
+            "(at student koreantruck)"
+        ],
+        [
+            "(at student mexicantruck)"
+        ],
+        [
+            "(at student lebanesetruck)"
+        ]
+    ],
+    "costs": [
+        {
+            "up-white": 1,
+            "down-white": 1,
+            "left-white": 1,
+            "right-white": 1
+        }
+    ],
+    "query": [
+        "belief",
+        "reward"
+    ],
+    "temperature": 1
+}

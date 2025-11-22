@@ -1,0 +1,13 @@
+You are observing an astronaut exploring planet with alien terrains, which is divided into a 4 by 11 grid.
+The terrains have different colors and different-colored terrains may be more or less exhausting to cross for the astronaut. 
+The astronaut can cross all terrains, even if it's exhausting.
+There are 2 terrain types in the map, which are blueterrain, grayterrain.
+At each scenario, the astronaut needs to walk to the spaceship.
+Sometimes care packages are dropped from above and the astronaut can pick them up.
+There is one unique care package: ['orangecylinder-package']. 
+The astronaut don't actually need the care packages. They can go directly to the spaceship, or they can pick one up.
+The astronaut cannot pick up more than 1 care packages.
+The astronaut can perform the following actions: up, down, left, right, and pickup.
+
+The astronaut always has a map. So they know all about the packages and the care packages.
+Your task is to judge how easy/exhausting it is for the astronauts to cross each terrain, and how much they like each care package.

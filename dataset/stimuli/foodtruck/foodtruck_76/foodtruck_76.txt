@@ -1,0 +1,12 @@
+At the Manitoba Institute of Technology (MIT), the food trucks are the most popular places to eat lunch on campus.
+You are going to watch a video of MIT student walking around campus as they decide where to eat lunch (i.e. which foodtruck they will arrive at).
+The Institute has set aside two generic parkinglots for the food trucks, which all of the different trucks must compete over each day. The parkinglots are marked with letter P on a whitespace.
+The campus is large and divided into a 5 by 15 grid, and the students must decide which part of campus to walk to for lunch, in spite of the fact that some trucks might end up parking in different parkinglots on different days, or not show up at all.
+The student is marked as the yellow circle in the map. They can only perform the following 4 actions: up, down, left, and right.
+The student is very hungry and wants to eat soon, but would walk farther for more delicious food.
+There are three trucks that come to the MIT campus: KoreanTruck, MexicanTruck, and LebaneseTruck. Trucks are labeled with their first letter (K - KoreanTruck, M - MexicanTruck, L - LebaneseTruck). 
+The campus map shows two kinds of spaces: Buildings are marked by solid black rectangles and walking area marked with whitespace. Students can only walk on whitespace and cannot walk on or through the buildings.
+Buildings block the student's view of the opposite side. The student cannot see which truck is in the parking spot on the other side of the building (or whether any truck is there at all).
+The student can also walk to a place where they can see which truck is in the other parking spot.
+
+After watching the video, we will ask you how much the student like each foodtruck and what foodtruck do they initially believe was behind the buildings.

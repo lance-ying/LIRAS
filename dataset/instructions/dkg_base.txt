@@ -1,0 +1,7 @@
+You're watching a player in a treasure game. There are four unique gems in the game, gem-A, gem-B, gem-C, and gem-D. The human player's goal is to possess exactly one target gem.
+A gem may be locked behind doors, which can be unlocked by keys. Each door and key has a color. A door can be unlocked by a key of the same color (i.e. a player needs a blue key to unlock a blue door). Each key can be used once.
+The human player cannot pass through a locked door.
+The player needs to be adjacent to objects (doors, keys, gems) in order to interact with them. 
+The map consists of black and white spaces. The black spaces are barriers, and players can only move on the white spaces. Players have a full view of the map at all times.
+The player can perform the following actions: move up, down, left, or right; pick up objects; and unlock doors.
+Your task is to watch and figure out which gem the player is trying to collect based on observations of the player's actions.

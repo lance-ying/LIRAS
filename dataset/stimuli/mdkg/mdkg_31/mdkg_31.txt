@@ -1,0 +1,14 @@
+
+You're watching a team of two players, a human (black agent) and a robot (grey agent), collaborating in a treasure game. There are three possible goal gems: gem-A, gem-B, and gem-C.
+
+The game is played on a 9 by 11 grid consisting of black and white squares. 
+Players can move only on the white squares. You may assume the doors are all on white squares.
+Each door and key can have one of the three colors in the map, which are ['red', 'blue', 'green'].
+The team's objective is for the human player to collect exactly one of the gems, where the robot can help with finding the keys to unlock some doors. The players cannot exchange keys. 
+Both players have a full view of the map at all times. 
+Each player can perform the following actions: move up, down, left, right, do nothing (noop), pick up items, or unlock doors. 
+Keys are used to unlock doors of the same color (e.g., red keys only unlock red doors). 
+The player no longer possesses the key after unlocking the door.
+Players can occupy the same square and pass by each other. 
+
+Your task is to observe and determine which gem the human-robot team is trying to collect."

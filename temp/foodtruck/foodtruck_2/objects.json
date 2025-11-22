@@ -1,0 +1,18 @@
+{
+    "generic_objects": [
+        "parkinglot"
+    ],
+    "unique_objects": [
+        "koreantruck",
+        "mexicantruck",
+        "lebanesetruck"
+    ],
+    "background_cells": [
+        "whitespace",
+        "building"
+    ],
+    "agent": [
+        "student"
+    ],
+    "obj_str": "(:objects\nparkinglot1 parkinglot2 - parkinglot\n)\n"
+}

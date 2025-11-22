@@ -1,0 +1,3 @@
+Which goal gem is the player trying to collect? For each gem, return an integer between 0 and 100 (inclusive), where 0 means that it is almost impossible that the player is trying to collect that gem and 100 means that it is almost certain that the player is trying to collect that gem.
+
+Your answer should be a single list of integers corresponding to gemA, gemB, gemC,..., in that order. The length of the list should equal to the number of goal gems mentioned in this scenario. For example, if there are four possible gems (GemA, GemB, GemC, GemD) and you think gemB and gemC are equally likely while GemA and GemD are quite unlikely. you can answer [10,50,50,10]. Directly output the answer and nothing else.

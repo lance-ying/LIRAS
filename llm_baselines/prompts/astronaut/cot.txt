@@ -1,0 +1,5 @@
+How easy/exhausting is it for the astronaut to cross each type of the terrains (defined by color)? For each terrain type, return a likert value between 1 and 7 (inclusive), where 1 means that it is extremely easy and 7 means it is extremely exhausting.
+
+How much does the astronaut like each care package? For each package, return a likert value between 1 and 7 (inclusive), where 1 means that the astronaut does not like the care package at all and 7 means that the astronaut likes the care package very much.
+
+Your answer should be a single list of likert values, where the length of the list is equal to the number of terrain types plus the number of care packages. In this scenario, your answer must be a list of {count} likert values. The order of judgments is {order}. Let's think step by step first. Then output your answer after `Answer:` on the last line and nothing else. 

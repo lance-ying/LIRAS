@@ -1,0 +1,21 @@
+Your task is to classify the type of the cell you are given. You will be provided with a list of cell types that you need to classify into. Often, there can be other objects in the cell. However, you should only output which cell type it is.
+
+Please only output a json and nothing else.
+
+Example:
+
+Input:
+
+Instructions: You are watching someone navigating a gridworld. It consists of blackspaces and blocks, which are yellow. There are some balls and pins that the agent may collect.
+
+Cell_types:
+{"background_cells":["blackspace", "blocks"]}
+
+Image: [an image of a cell which has a blue ball on a black background]
+
+Output:
+
+{
+    "cell_type": "blackspace"
+}
+

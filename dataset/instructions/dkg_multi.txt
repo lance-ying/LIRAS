@@ -1,0 +1,8 @@
+You're watching a team of players, a human and a robot, collaborating on a treasure game. {{goals}}
+The game plays on a {{gridsize}} grid, which consists of black and white spaces. The players can move on the white squares.
+The team's goal is for the human player to get exactly one of the gems. 
+The players have a full view of the map at all times.
+Each player can take these actions: up, down, left, right, noop, pickup item, or unlock doors.
+Keys are used to unlock doors with the same color (e.g. red keys only unlock red doors).
+Players can occupy the same square and walk pass each other.
+Your task is to watch and figure out which gem the human-robot team is trying to collect.

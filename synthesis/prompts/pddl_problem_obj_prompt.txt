@@ -1,0 +1,21 @@
+Your job is to synthesis the object section of the PDDL problem file, based on the provided PDDL domain definition and the natural langauge description of the problem file.
+
+Make sure you do not repeat any objects that have already been defined as constants in the PDDL domain file.
+
+Please respond with a json format, example:
+
+Input:
+
+pddl domain definition: 
+
+(:types 
+        ball plate - item
+        agent item - object
+    )
+
+
+objects from visuals: ["player", "plate1", "plate2", "plate3", "baseball", "basketabll"]
+
+Output:
+
+{"objects": "(:objects plate1 plate2 plate3 - plate)"}

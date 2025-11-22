@@ -1,0 +1,11 @@
+How much does the student like each of the food trucks? For each of the following options, return a likert value between 1 and 7 (inclusive), where 1 means that the student does not like the food truck at all and 7 means that the student likes the food truck very much.
+1. KoreanTruck
+2. MexicanTruck
+3. LebaneseTruck
+
+At the beginning of the video, when the student was in the initial location, what did they believe was behind the buildings? For each of the following possibilities, return a likert scale between 1 and 7 (inclusive), where 1 means that possibility is "highly unlikely" and 7 means that possibility is "highly likely".
+1. MexicanTruck
+2. LebaneseTruck
+3. No Truck
+
+Your answer should be a list of 6 likert values, one for each of the questions above (2 questions with 3 sub-questions each). The format should be [a, b, c, d, e, f], where a, b, c, d, e, f are integers between 1 and 7. Directly output the answer and nothing else.

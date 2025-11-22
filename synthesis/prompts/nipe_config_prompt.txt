@@ -1,0 +1,78 @@
+Your task is to synthesize a json configuration file given the problem description. 
+
+Grid_size: size of the grid, row by column.
+
+Observability: should either "full" or "partial", indicating whether the agent can see the full map.
+
+Belief config: If observability is full, return an empty dictionary, otherwise, include information below. Note that you should read these from 
+
+1. Belief_object: In case of partial observability, you should indicate what is the item being hidden.
+
+2. Belief_container: In case of partial observability, you should indicate what are the containers for the hidden objects.
+
+3. Barrier: Name any physical barrier that obstructs the view of the agent.
+
+4. Agent: Name of the agent.
+
+Goals: should be a list of predicate strings. If the problem doesn't call for goal inference (i.e. goal is given), then this should be a list with 1 predicate. Please note that sometimes the goal can be a composite if the agent can have multiple objectives. For example, if an agent's goal is to get to get home, but has the option to pick up a flower or pizza on the way home, the goal space would be [["(at agent home)"], ["(at agent home)", "(has agent flower)"], ["(at agent home)", "(has agent pizza)"], ["(at agent home)", "(has agent flower)", "(has agent pizza)"] ]. Make sure the predicates are allowed based on the PDDL domain definition. Make sure all goal object names match with the object names provided to you.
+
+Costs: should be a list of possible different action cost profiles (dictionary). The action names should match exactly with the actions from the PDDL description file. If the task doesn't call for different action costs (i.e. action costs vary across different cells), then this should have only 1 action cost profile. Action costs should be a real number greater than 0. In general, specific actions such as pickup should have higher costs than movements.
+
+Query: should be one or more of the following: "belief", "goal", "reward", "cost". Note that rewards usually asks how much does agent like X, whereas goals questions ask which item is the agent's goal.
+
+Temperature: How rational is the agent? The value should be a real number greater than 0. A lower temperature indicates more rational actions. By default this should be 1.
+
+
+=========================
+
+
+Here is an example:
+
+Suppose the task is to infer a human's beliefs, goals, as well as the costs of movement in two kinds of terrains, black and white, at a 3 by 4 grid. The human cannot see through the black terrain.
+
+The human's goal is to get one of the three balls: baseball, basketball, and tennisball. The balls are hidden in boxes and the agent cannot see which ball is in which box.
+
+actions from PDDL domain: up-white, down-white, left-white, right-white, up-black, down-black, left-black, right-black, pickup 
+
+object types: 
+{
+    "generic_objects": ["ball", "box"],
+    "unique_objects": [
+        "baseball", "basketball", "tennisball"
+    ],
+    "agent": [
+        "human"
+    ]
+}
+
+Example output:
+
+{
+    "grid_size": [3,4],
+    "observability" : "partial",
+    "belief_config" : {    
+        "belief_object": "ball",
+        "belief_container": "box",
+        "barrier": "blackterrain",
+        "agent" : "human"
+    },
+    "goals": [["(has human baseball)"], ["(has human basketball)"], ["(has human tennisball)"]],
+    "costs": [
+        {
+            "up-white": 1, "down-white": 1, "left-white": 1,  "right-white": 2, "up-black": 2, "down-black": 2, "left-black": 2,  "right-black": 2, "pickup": 5,
+    }
+        {
+            "up-white": 1, "down-white": 1, "left-white": 1,  "right-white": 4, "up-black": 4, "down-black": 4, "left-black": 4,  "right-black": 4, "pickup": 5,
+    }
+        {
+            "up-white": 2, "down-white": 2, "left-white": 2,  "right-white": 2, "up-black": 1, "down-black": 1, "left-black": 1,  "right-black": 1, "pickup": 5,
+    }
+        {
+            "up-white": 4, "down-white": 4, "left-white": 4,  "right-white": 4, "up-black": 1, "down-black": 1, "left-black": 1,  "right-black": 1, "pickup": 5,
+    }
+
+    ],
+    "query":["belief", "goal", "costs"],
+}
+
+Now please generate a configuration file for the following scenario:
